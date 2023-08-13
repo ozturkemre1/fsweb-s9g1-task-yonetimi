@@ -20,7 +20,10 @@ function App() {
   }
 
   function handleComplete(id) {
-    console.log("tamamlama fonksiyonunu buraya yazın")
+    console.log("tamamlama fonksiyonunu buraya yazın",id);
+    const tasksClone = [...tasks]
+    const updatedTask = (tasksClone.find((t) => t.id === id )).status = "yapıldı"
+    setTasks(tasksClone)
   }
 
   return (
